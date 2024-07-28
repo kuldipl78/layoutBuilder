@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { ConfigurationContext } from '../../ConfigurationContext';
-import './index.css';
+import React, {useContext} from 'react'
+import {ConfigurationContext} from './context/ConfigurationContext'
+import './index.css'
 
 const ConfigurationController = () => {
   const {
@@ -10,7 +10,7 @@ const ConfigurationController = () => {
     onToggleShowContent,
     onToggleShowLeftNavbar,
     onToggleShowRightNavbar,
-  } = useContext(ConfigurationContext);
+  } = useContext(ConfigurationContext)
 
   return (
     <div className="configuration-controller">
@@ -43,7 +43,7 @@ const ConfigurationController = () => {
         <label htmlFor="right-navbar-checkbox">Right Navbar</label>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ConfigurationController;
+export default ConfigurationController

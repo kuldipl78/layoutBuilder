@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
-import { ConfigurationContext } from '../../ConfigurationContext';
-import './index.css';
+import React, {useContext} from 'react'
+import {ConfigurationContext} from './context/ConfigurationContext'
+import './index.css'
 
 const Layout = () => {
-  const { showContent, showLeftNavbar, showRightNavbar } = useContext(ConfigurationContext);
+  const {showContent, showLeftNavbar, showRightNavbar} =
+    useContext(ConfigurationContext)
 
   return (
     <div className="layout">
@@ -12,7 +13,7 @@ const Layout = () => {
       {showLeftNavbar && <div className="left-navbar">Left Navbar</div>}
       {showRightNavbar && <div className="right-navbar">Right Navbar</div>}
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

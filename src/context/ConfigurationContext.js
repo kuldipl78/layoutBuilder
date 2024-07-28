@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react'
 
-const ConfigurationContext = React.createContext();
+const ConfigurationContext = React.createContext()
 
 class ConfigurationProvider extends Component {
   state = {
     showContent: true,
     showLeftNavbar: true,
     showRightNavbar: true,
-  };
+  }
 
   onToggleShowContent = () => {
-    this.setState(prevState => ({ showContent: !prevState.showContent }));
-  };
+    this.setState(prevState => ({showContent: !prevState.showContent}))
+  }
 
   onToggleShowLeftNavbar = () => {
-    this.setState(prevState => ({ showLeftNavbar: !prevState.showLeftNavbar }));
-  };
+    this.setState(prevState => ({showLeftNavbar: !prevState.showLeftNavbar}))
+  }
 
   onToggleShowRightNavbar = () => {
-    this.setState(prevState => ({ showRightNavbar: !prevState.showRightNavbar }));
-  };
+    this.setState(prevState => ({showRightNavbar: !prevState.showRightNavbar}))
+  }
 
   render() {
-    const { children } = this.props;
-    const { showContent, showLeftNavbar, showRightNavbar } = this.state;
+    const {children} = this.props
+    const {showContent, showLeftNavbar, showRightNavbar} = this.state
     return (
       <ConfigurationContext.Provider
         value={{
@@ -37,8 +37,8 @@ class ConfigurationProvider extends Component {
       >
         {children}
       </ConfigurationContext.Provider>
-    );
+    )
   }
 }
 
-export { ConfigurationProvider, ConfigurationContext };
+export {ConfigurationProvider, ConfigurationContext}
