@@ -1,0 +1,12 @@
+.footer-main {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #cbd5e1;
+}
+.main-headding {
+  color: black;
+  font-size: large;
+}
